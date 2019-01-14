@@ -26,7 +26,7 @@ SECRET_KEY = '945)r5hh+l+wyc3hs2e*h#s*qvqh+nt)s@xlw*^ik9kx6o2(po'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-food-tracker.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['my-food-tracker.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
