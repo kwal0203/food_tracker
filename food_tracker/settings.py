@@ -79,8 +79,18 @@ WSGI_APPLICATION = 'food_tracker.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'food_tracker',
+        'USER': 'kwal0203',
+        'PASSWORD': 'metta123',
+        'HOST': 'localhost',
+        'PORT': '',
+     }
 }
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
