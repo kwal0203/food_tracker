@@ -2,4 +2,4 @@ django
 djangorestframework
 gunicorn
 dj-database-url
-psycopg2
+psycopg2-binary
