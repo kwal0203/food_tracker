@@ -78,15 +78,22 @@ WSGI_APPLICATION = 'food_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'food_tracker',
+#         'USER': 'kwal0203',
+#         'PASSWORD': 'metta123',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#      }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'food_tracker',
-        'USER': 'kwal0203',
-        'PASSWORD': 'metta123',
-        'HOST': 'localhost',
-        'PORT': '',
-     }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
