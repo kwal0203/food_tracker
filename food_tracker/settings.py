@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'tracker.apps.TrackerConfig',
     'rest_framework',
     'rest_framework.authtoken',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
     'api',
     'rest_auth',
     'users',
@@ -148,3 +152,7 @@ STATICFILES_DIRS = (
 
 # User stuff
 AUTH_USER_MODEL = 'users.CustomUser'
+
+SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
