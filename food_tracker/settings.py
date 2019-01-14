@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tracker.apps.TrackerConfig',
     'rest_framework',
-    'food_tracker.users',
+    'users',
 ]
 
 MIDDLEWARE = [
